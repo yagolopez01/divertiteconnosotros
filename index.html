@@ -1,133 +1,364 @@
-<!DOCTYPE html><html lang="en"><head>
-        <title>🍀​ Red Jocker 🎰​ -> Click en el botón de whatsapp <-</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/estilos.css" rel="stylesheet">
-        <link href="css/banner.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharkSeguidores MX | Premium Social Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-red: #9e0b0f;
+            --dark-bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --whatsapp-green: #25d366;
+            --accent-blue: #00a8ff;
+        }
 
-<!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s){
-        if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}
-        (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '572231198667833');
-        fbq('track', 'PageView');
-    </script>
-    
-    
-    <noscript>
-        <img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=572231198667833&ev=PageView&noscript=1"/>   
-    </noscript>
-    
-    
-    <!-- End Meta Pixel Code -->
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-    </head>
-    <body>
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-	
-        <div class="containerTop">	
-            
-            <div class="content">
-                
-                <div class="contentLogo">	
-                     <img src="images/logo.png" width="120" height="120">		
-                    
-                </div>
-                <div class="contentTitulo">	
-                     <img src="images/titulo.png" width="60%" height="60%">				<br><center>
-                    <div class="contentBanner">
-                        <div class="visible">
-                                <p>
-                                    Trabajamos  
-                                </p>
-                                <ul>
-                                    <li>Instagram</li>
-                                    <li>TikTok</li>
-                                    <li>Twitter</li>
-                                </ul>
-                        </div>
-                    </div></center>
-                
-                </div>
-    
-                <div id="contentBoton" class="contentBoton">	
-                    <button rel="nofollow noreferrer" role="link" id="botónEnviarSolicitud" class="btnwsp"><img src="images/boton.png" class="imgboton" width="80%" height="80%" border="0"></button>			</div>
-                <div id="loadWsp" class="loadWsp">
-                        <div id="conecting" class="conecting">
-                            <div id="conectingTxt" class="conectingTxt">
-                                Conectando con WhatsApp ... 
-                            </div>
-                            <div id="conectingIcon" class="conectingIcon">
-                                <div class="c-loader"></div>
-                            </div>
-                        </div>
-                        <div id="info" class="info">
-                            Si no se abre el enlace. Escribinos al <b>1133988055</b> para crear tu <b>usuario</b> y regalarte un Bono de Bienvenida
-                        </div>	
-    
-                    </div>
-                    <script type="text/javascript">
-                        document.getElementById('botónEnviarSolicitud').addEventListener('click', function() {
-            
-                            var wsp='5491131264431';	//Nro de wsp	
-                            var pixel='572231198667833';	//Falta cambiar pixel Id 	
-                            
-                            const shareUrl = 'https://redjocker.com';    // Falta cambiar url
-                            const shareText = 'Hola quiero crear un usuario! Mi nombre es:';
-                            const whatsappUrl = `https://api.whatsapp.com/send?phone=5491131264431&text=${encodeURIComponent(shareText)}`;
-                            window.location.href = whatsappUrl;
+        /* --- FONDOS DISPERSOS --- */
+        .background-logos {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Detrás de todo */
+            opacity: 0.15; /* Sutil */
+            pointer-events: none; /* No clickable */
+        }
 
-                                    
-                                    
-                            
-                            fbq('trackCustom', 'Contact', {
-                                button_name: 'EnviarSolicitud',
-                                page_name: 'LandingI1', // Cambiar según la pag
-                            });
+        .background-logos i {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 2.5rem;
+            filter: blur(2px);
+        }
 
-            
-                        
-                    }, false);
-                    
-                        
-                    </script>
-                <div class="contentLeyenda">
-                    <p>HACE CLIC EN EL BOTON PARA</p><p>OBTENER INFORMACION</p>
-    
-                </div>
-                    <div class="bono">
-                        <div id="leyenda" class="leyenda">
-                        <p><b>TODOS LOS DIAS</b></p>					</div>
-                        <p><b>PROMOCIONES EXCLUSIVAS</b></p>	
-                        <p>Prueba gratis <b>30 seguidores</b></p>
-                    </div>
-    
-                
+        /* Distribución "aleatoria" (puedes ajustar las posiciones) */
+        .insta-1 { top: 10%; left: 5%; transform: rotate(15deg); }
+        .tiktok-1 { top: 20%; right: 10%; transform: rotate(-20deg); font-size: 3rem; }
+        .insta-2 { top: 35%; left: 25%; transform: rotate(-10deg); font-size: 1.8rem; }
+        .tiktok-2 { top: 50%; right: 25%; transform: rotate(10deg); font-size: 2rem; }
+        .insta-3 { top: 65%; left: 10%; transform: rotate(25deg); }
+        .tiktok-3 { top: 75%; right: 5%; transform: rotate(-15deg); font-size: 3rem; }
+        .insta-4 { top: 85%; left: 30%; transform: rotate(-5deg); font-size: 2rem; }
+        .tiktok-4 { top: 92%; right: 20%; transform: rotate(15deg); font-size: 1.5rem; }
+        .insta-5 { top: 15%; left: 50%; transform: rotate(5deg); font-size: 1.5rem; }
+        .tiktok-5 { top: 80%; left: 55%; transform: rotate(-10deg); font-size: 2.5rem; }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            position: relative; /* Para que el contenido esté sobre el fondo */
+            z-index: 1; /* Sobre el fondo */
+        }
+
+        /* BARRA DE URGENCIA CON CONTADOR */
+        .urgent-bar {
+            background: #ffbc00;
+            color: black;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(255, 188, 0, 0.2);
+        }
+
+        /* Header & Logo */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(0, 168, 255, 0.2);
+        }
+        .logo span { color: var(--accent-blue); }
+        
+        .tagline { font-size: 0.9rem; color: #888; margin-bottom: 30px; }
+
+        /* Iconos de Confianza */
+        .trust-badges {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+            font-size: 0.75rem;
+            color: #ccc;
+        }
+        .trust-badges div i { color: var(--accent-blue); display: block; margin-bottom: 5px; font-size: 1.2rem; }
+
+        /* PASOS DE COMPRA */
+        .purchase-steps {
+            font-size: 0.7rem;
+            color: #888;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+            background: rgba(255,255,255,0.02);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .purchase-steps span { color: #ccc; }
+        .purchase-steps i { font-size: 0.6rem; color: var(--accent-blue); }
+
+        /* Grilla de Precios */
+        .price-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            padding: 20px 10px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .price-card h3 { font-size: 0.75rem; color: #aaa; text-transform: uppercase; }
+        .price-card .amount { font-size: 1.1rem; font-weight: 800; display: block; margin: 5px 0; }
+        .price-card .price { font-size: 1.2rem; color: var(--accent-blue); font-weight: 600; }
+        
+        .featured { 
+            border: 1px solid var(--primary-red); 
+            grid-column: span 2; 
+            box-shadow: 0 0 20px rgba(158, 11, 15, 0.2);
+            position: relative;
+        }
+        .featured::before {
+            content: "RECOMENDADO";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-red);
+            font-size: 0.6rem;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-weight: 800;
+        }
+
+        /* Botón de WhatsApp */
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .wa-icon-container {
+            background: white;
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.8rem; }
+
+        /* Preguntas Frecuentes */
+        .faq-section { text-align: left; margin-bottom: 40px; }
+        .faq-item { background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #222; }
+        .faq-item h4 { font-size: 0.85rem; margin-bottom: 5px; color: var(--accent-blue); }
+        .faq-item p { font-size: 0.8rem; color: #aaa; }
+
+        /* Testimonios */
+        .testimonials { text-align: left; }
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            padding: 22px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            border-left: 5px solid var(--accent-blue);
+        }
+        .user-info { display: flex; align-items: center; margin-bottom: 12px; }
+        .user-img { width: 42px; height: 42px; border-radius: 50%; margin-right: 12px; border: 1px solid #444; }
+        .user-name { font-size: 0.95rem; font-weight: 600; }
+        .stars { color: #ffbc00; font-size: 0.75rem; }
+        .test-text { font-size: 0.85rem; color: #ccc; }
+
+        .footer { margin-top: 50px; font-size: 0.7rem; color: #444; letter-spacing: 1px; padding-bottom: 20px; }
+        h2 { font-size: 1.2rem; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="background-logos">
+        <i class="fab fa-instagram insta-1"></i>
+        <i class="fab fa-tiktok tiktok-1"></i>
+        <i class="fab fa-instagram insta-2"></i>
+        <i class="fab fa-tiktok tiktok-2"></i>
+        <i class="fab fa-instagram insta-3"></i>
+        <i class="fab fa-tiktok tiktok-3"></i>
+        <i class="fab fa-instagram insta-4"></i>
+        <i class="fab fa-tiktok tiktok-4"></i>
+        <i class="fab fa-instagram insta-5"></i>
+        <i class="fab fa-tiktok tiktok-5"></i>
+    </div>
+
+    <div class="container">
+        <div class="urgent-bar">
+            <i class="fas fa-clock"></i> PROMOCIONES VÁLIDAS POR: <span id="timer">02:59:59</span>
+        </div>
+
+        <div class="logo">SHARK<span>SEGUIDORES</span></div>
+        <p class="tagline">Impulsa tu presencia digital en México 🇲🇽</p>
+
+        <div class="trust-badges">
+            <div><i class="fas fa-shield-alt"></i>Seguro</div>
+            <div><i class="fas fa-bolt"></i>Rápido</div>
+            <div><i class="fas fa-lock"></i>Sin Claves</div>
+            <div><i class="fas fa-user-check"></i>Reales</div>
+        </div>
+
+        <div class="purchase-steps">
+            <span>Elegís el pack</span> ➡️ <span>Pagás</span> ➡️ <span>Vés tu perfil crecer</span>
+        </div>
+
+        <div class="price-grid">
+            <div class="price-card">
+                <h3>Principiante</h3>
+                <span class="amount">2,000 Segs</span>
+                <span class="price">$100 MXN</span>
+            </div>
+            <div class="price-card">
+                <h3>Pro</h3>
+                <span class="amount">10k + 5k Likes</span>
+                <span class="price">$315 MXN</span>
+            </div>
+            <div class="price-card featured">
+                <h3>🔥 Pack Viral: Maximo Crecimiento</h3>
+                <span class="amount">20k Segs + 10k Likes</span>
+                <span class="price">$500 MXN</span>
             </div>
         </div>
-        <div class="containerLista">	
-         
-                <div class="containerItem">
-                     <img src="images/ic1.png" width="70px" height="70px">	
-                    <p>Aceptamos transferencias de <br>cualquier banco y deposito en oxxo o 7Seven.</p>
-                </div>
+
+        <a href="https://wa.me/521XXXXXXXXXX?text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
+            <div style="text-align: left;">
+                <span style="display:block; font-weight:800; font-size:1.1rem;">¡ORDENAR POR WHATSAPP!</span>
+                <span style="display:block; font-size:0.75rem; opacity:0.9;">Atención personalizada 24/7</span>
+            </div>
+            <div class="wa-icon-container">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+        </a>
+
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-section">
+            <div class="faq-item">
+                <h4>¿Es seguro para mi cuenta?</h4>
+                <p>100% seguro, el servicio es totalmente organico y no pedimos ningun dato de tu cuenta.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Se puede tener la cuenta privada?</h4>
+                <p>Si, solo debe estar publica durante la carga y luego puede volver a privada.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuales son los metodos de pago?</h4>
+                <p>Aceptamos transferencia de cualquier banco y deposito en Oxxo o 7Eleven.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuánto tarda la entrega?</h4>
+                <p>Iniciamos en menos de 15 minutos tras confirmar tu pedido por WhatsApp.</p>
+            </div>
         </div>
-        <div class="containerLista">	
-                <div class="containerItem">
-                     <img src="images/ic2.png" width="70px" height="70px">	
-                    <p>Estamos atendiendo<br>las 24 horas excepto emergencias</p>
+
+        <h2>Opiniones de Clientes</h2>
+
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/100?u=1" class="user-img">
+                    <div>
+                        <div class="user-name">@Magaanoya</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
                 </div>
-         </div>
-        
-         <div class="containerAviso">	
-            <p>Todos nuestros servicios son Premium. <br> </p>
-            <p>+5000 ventas realizadas desde 2020 </p>
-         </div>	
-        
-    
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508354'},{'dcenter':'p3'},{'cp_id':'10167768'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="js/scc-c2.min.js"></script></body></html>
+                <p class="test-text">"La neta me daba desconfianza pero llegaron súper rápido. Muy recomendados para darle un empujón al perfil."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/100?u=2" class="user-img">
+                    <div>
+                        <div class="user-name">@Logambera</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="test-text">"Servicio de diez. Los seguidores no se bajan y la atención por WhatsApp fue muy amable."</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            CONEXIÓN CIFRADA by Lola • SHARKSEGUIDORES.MX 2020/2026
+        </div>
+    </div>
+
+    <script>
+        function startTimer(duration, display) {
+            var timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var threeHours = 60 * 60 * 3,
+                display = document.querySelector('#timer');
+            startTimer(threeHours, display);
+        };
+    </script>
+
+</body>
+</html>
