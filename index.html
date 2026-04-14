@@ -29,6 +29,31 @@
             overflow-x: hidden;
         }
 
+        /* BOTÓN FLOTANTE ESTÁTICO */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
         .background-logos {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -42,7 +67,6 @@
             filter: blur(2px);
         }
 
-        /* Posiciones de los logos adicionales */
         .insta-1 { top: 5%; left: 5%; transform: rotate(15deg); }
         .tiktok-1 { top: 15%; right: 5%; transform: rotate(-20deg); font-size: 3rem; }
         .insta-2 { top: 30%; left: 15%; transform: rotate(-10deg); font-size: 1.8rem; }
@@ -176,10 +200,21 @@
         .stars { color: #ffbc00; font-size: 0.75rem; }
         .test-text { font-size: 0.85rem; color: #ccc; }
 
-        .footer { margin-top: 50px; font-size: 0.7rem; color: #444; padding-bottom: 20px; }
+        /* Estilos del pie de página */
+        .footer { margin-top: 50px; padding-bottom: 20px; }
+        .footer-logo { width: 100px; margin: 0 auto 10px auto; display: block; opacity: 0.6; }
+        .footer-text { font-size: 0.7rem; color: #444; margin-bottom: 10px; }
+        .footer-icons { display: flex; justify-content: center; gap: 15px; }
+        .footer-link { color: #888; text-decoration: none; font-size: 1.2rem; transition: color 0.3s; }
+        .footer-link:hover.insta { color: #bc1888; }
+        .footer-link:hover.wa { color: var(--whatsapp-green); }
     </style>
 </head>
 <body>
+
+    <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <div class="background-logos">
         <i class="fab fa-instagram insta-1"></i>
@@ -286,7 +321,18 @@
         </div>
 
         <div class="footer">
-            • CIFRADO by Lola - SHARKSEGUIDORES.MX 2020/2026 •
+            <img src="logo-removebg-preview.png" alt="SharkSeguidores Logo" class="footer-logo">
+            <div class="footer-text">
+                • CIFRADO by Lola - SHARKSEGUIDORES.MX 2020/2026 •
+            </div>
+            <div class="footer-icons">
+                <a href="https://instagram.com/sharkseguidores.mx" target="_blank" class="footer-link insta">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web" target="_blank" class="footer-link wa">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
     </div>
 
