@@ -36,9 +36,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Detrás de todo */
-            opacity: 0.15; /* Sutil */
-            pointer-events: none; /* No clickable */
+            z-index: -1;
+            opacity: 0.15;
+            pointer-events: none;
         }
 
         .background-logos i {
@@ -48,33 +48,57 @@
             filter: blur(2px);
         }
 
-        /* Distribución "aleatoria" (puedes ajustar las posiciones) */
         .insta-1 { top: 10%; left: 5%; transform: rotate(15deg); }
         .tiktok-1 { top: 20%; right: 10%; transform: rotate(-20deg); font-size: 3rem; }
         .insta-2 { top: 35%; left: 25%; transform: rotate(-10deg); font-size: 1.8rem; }
         .tiktok-2 { top: 50%; right: 25%; transform: rotate(10deg); font-size: 2rem; }
         .insta-3 { top: 65%; left: 10%; transform: rotate(25deg); }
         .tiktok-3 { top: 75%; right: 5%; transform: rotate(-15deg); font-size: 3rem; }
-        .insta-4 { top: 85%; left: 30%; transform: rotate(-5deg); font-size: 2rem; }
-        .tiktok-4 { top: 92%; right: 20%; transform: rotate(15deg); font-size: 1.5rem; }
-        .insta-5 { top: 15%; left: 50%; transform: rotate(5deg); font-size: 1.5rem; }
-        .tiktok-5 { top: 80%; left: 55%; transform: rotate(-10deg); font-size: 2.5rem; }
 
         .container {
             max-width: 480px;
             width: 100%;
             text-align: center;
-            position: relative; /* Para que el contenido esté sobre el fondo */
-            z-index: 1; /* Sobre el fondo */
+            position: relative;
+            z-index: 1;
         }
 
-        /* BARRA DE URGENCIA CON CONTADOR */
+        /* LOGO ESTILO */
+        .brand-logo {
+            width: 180px; /* Ajusta el tamaño según prefieras */
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.3));
+        }
+
+        /* Header & Logo Texto */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .logo span { color: var(--accent-blue); }
+        
+        .tagline { font-size: 0.9rem; color: #888; margin-bottom: 25px; }
+
+        /* Iconos de Confianza */
+        .trust-badges {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            font-size: 0.75rem;
+            color: #ccc;
+        }
+        .trust-badges div i { color: var(--accent-blue); display: block; margin-bottom: 5px; font-size: 1.2rem; }
+
+        /* BARRA DE URGENCIA (REUBICADA ABAJO DE TRUST BADGES) */
         .urgent-bar {
             background: #ffbc00;
             color: black;
             font-size: 0.8rem;
             font-weight: 800;
-            padding: 8px;
+            padding: 10px;
             border-radius: 10px;
             margin-bottom: 25px;
             text-transform: uppercase;
@@ -84,46 +108,6 @@
             gap: 8px;
             box-shadow: 0 4px 15px rgba(255, 188, 0, 0.2);
         }
-
-        /* Header & Logo */
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 15px rgba(0, 168, 255, 0.2);
-        }
-        .logo span { color: var(--accent-blue); }
-        
-        .tagline { font-size: 0.9rem; color: #888; margin-bottom: 30px; }
-
-        /* Iconos de Confianza */
-        .trust-badges {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 15px;
-            font-size: 0.75rem;
-            color: #ccc;
-        }
-        .trust-badges div i { color: var(--accent-blue); display: block; margin-bottom: 5px; font-size: 1.2rem; }
-
-        /* PASOS DE COMPRA */
-        .purchase-steps {
-            font-size: 0.7rem;
-            color: #888;
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            font-weight: 600;
-            background: rgba(255,255,255,0.02);
-            padding: 8px;
-            border-radius: 8px;
-        }
-        .purchase-steps span { color: #ccc; }
-        .purchase-steps i { font-size: 0.6rem; color: var(--accent-blue); }
 
         /* Grilla de Precios */
         .price-grid {
@@ -181,9 +165,9 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+            0% { transform: scale(1); box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 10px 40px rgba(158, 11, 15, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4); }
         }
 
         .wa-icon-container {
@@ -194,13 +178,11 @@
         }
         .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.8rem; }
 
-        /* Preguntas Frecuentes */
         .faq-section { text-align: left; margin-bottom: 40px; }
         .faq-item { background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #222; }
         .faq-item h4 { font-size: 0.85rem; margin-bottom: 5px; color: var(--accent-blue); }
         .faq-item p { font-size: 0.8rem; color: #aaa; }
 
-        /* Testimonios */
         .testimonials { text-align: left; }
         .testimonial-card {
             background: rgba(255,255,255,0.03);
@@ -228,16 +210,11 @@
         <i class="fab fa-tiktok tiktok-2"></i>
         <i class="fab fa-instagram insta-3"></i>
         <i class="fab fa-tiktok tiktok-3"></i>
-        <i class="fab fa-instagram insta-4"></i>
-        <i class="fab fa-tiktok tiktok-4"></i>
-        <i class="fab fa-instagram insta-5"></i>
-        <i class="fab fa-tiktok tiktok-5"></i>
     </div>
 
     <div class="container">
-        <div class="urgent-bar">
-            <i class="fas fa-clock"></i> PROMOCIONES VÁLIDAS POR: <span id="timer">02:59:59</span>
-        </div>
+        
+        <img src="logo-removebg-preview.png" alt="SharkSeguidores Logo" class="brand-logo">
 
         <div class="logo">SHARK<span>SEGUIDORES</span></div>
         <p class="tagline">Impulsa tu presencia digital en México 🇲🇽</p>
@@ -247,6 +224,10 @@
             <div><i class="fas fa-bolt"></i>Rápido</div>
             <div><i class="fas fa-lock"></i>Sin Claves</div>
             <div><i class="fas fa-user-check"></i>Reales</div>
+        </div>
+
+        <div class="urgent-bar">
+            <i class="fas fa-clock"></i> PROMOCIONES VÁLIDAS POR: <span id="timer">02:59:59</span>
         </div>
 
         <div class="price-grid">
@@ -267,7 +248,7 @@
             </div>
         </div>
 
-       <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
             <div style="text-align: left;">
                 <span style="display:block; font-weight:800; font-size:1.1rem;">¡ORDENAR POR WHATSAPP!</span>
                 <span style="display:block; font-size:0.75rem; opacity:0.9;">Atención personalizada 24/7</span>
