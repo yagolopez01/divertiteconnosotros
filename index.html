@@ -23,8 +23,8 @@
             color: white;
             display: flex;
             justify-content: center;
-            /* AJUSTE: Margen superior mínimo para pegar todo arriba */
-            padding: 10px 20px 40px 20px; 
+            /* Reducimos el padding superior al mínimo */
+            padding: 5px 20px 40px 20px; 
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
@@ -51,10 +51,6 @@
 
         .insta-1 { top: 10%; left: 5%; transform: rotate(15deg); }
         .tiktok-1 { top: 20%; right: 10%; transform: rotate(-20deg); font-size: 3rem; }
-        .insta-2 { top: 35%; left: 25%; transform: rotate(-10deg); font-size: 1.8rem; }
-        .tiktok-2 { top: 50%; right: 25%; transform: rotate(10deg); font-size: 2rem; }
-        .insta-3 { top: 65%; left: 10%; transform: rotate(25deg); }
-        .tiktok-3 { top: 75%; right: 5%; transform: rotate(-15deg); font-size: 3rem; }
 
         .container {
             max-width: 480px;
@@ -64,12 +60,11 @@
             z-index: 1;
         }
 
-        /* LOGO ESTILO - AJUSTE CRÍTICO DE MÁRGENES */
+        /* AJUSTE PARA COMPENSAR EL ESPACIO DEL ARCHIVO DE IMAGEN */
         .brand-logo {
             width: 180px;
-            /* AJUSTE: Eliminados márgenes superiores e inferiores para pegar todo */
-            margin: 0px auto; 
             display: block;
+            margin: -40px auto -35px auto; /* Márgenes negativos para absorber el aire negro de la imagen */
             filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.3));
         }
 
@@ -77,19 +72,19 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
         .logo span { color: var(--accent-blue); }
         
-        .tagline { font-size: 0.9rem; color: #888; margin-bottom: 25px; }
+        .tagline { font-size: 0.9rem; color: #888; margin-bottom: 20px; }
 
         /* Iconos de Confianza */
         .trust-badges {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-size: 0.75rem;
             color: #ccc;
         }
@@ -101,15 +96,14 @@
             color: black;
             font-size: 0.8rem;
             font-weight: 800;
-            padding: 10px;
+            padding: 8px;
             border-radius: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(255, 188, 0, 0.2);
         }
 
         /* Grilla de Precios */
@@ -117,20 +111,19 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .price-card {
             background: var(--card-bg);
-            padding: 20px 10px;
+            padding: 15px 10px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            transition: 0.3s;
         }
 
-        .price-card h3 { font-size: 0.75rem; color: #aaa; text-transform: uppercase; }
-        .price-card .amount { font-size: 1.1rem; font-weight: 800; display: block; margin: 5px 0; }
+        .price-card h3 { font-size: 0.7rem; color: #aaa; text-transform: uppercase; }
+        .price-card .amount { font-size: 1.1rem; font-weight: 800; display: block; margin: 3px 0; }
         .price-card .price { font-size: 1.2rem; color: var(--accent-blue); font-weight: 600; }
         
         .featured { 
@@ -138,18 +131,6 @@
             grid-column: span 2; 
             box-shadow: 0 0 20px rgba(158, 11, 15, 0.2);
             position: relative;
-        }
-        .featured::before {
-            content: "RECOMENDADO";
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-red);
-            font-size: 0.6rem;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-weight: 800;
         }
 
         /* Botón de WhatsApp */
@@ -160,50 +141,35 @@
             background-color: var(--primary-red);
             color: white;
             text-decoration: none;
-            padding: 18px 25px;
+            padding: 15px 20px;
             border-radius: 15px;
             margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4);
             animation: pulse 2s infinite;
         }
 
-            @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4); }
-            50% { transform: scale(1.02); box-shadow: 0 10px 40px rgba(158, 11, 15, 0.6); }
-            100% { transform: scale(1); box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4); }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
         }
 
         .wa-icon-container {
             background: white;
-            width: 45px; height: 45px;
+            width: 40px; height: 40px;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
         }
-        .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.8rem; }
+        .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.6rem; }
 
-        /* Preguntas Frecuentes */
+        h2 { font-size: 1.2rem; margin-bottom: 20px; }
+
         .faq-section { text-align: left; margin-bottom: 40px; }
         .faq-item { background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #222; }
-        .faq-item h4 { font-size: 0.85rem; margin-bottom: 5px; color: var(--accent-blue); }
+        .faq-item h4 { font-size: 0.85rem; color: var(--accent-blue); }
         .faq-item p { font-size: 0.8rem; color: #aaa; }
 
-        /* Testimonios */
-        .testimonials { text-align: left; }
-        .testimonial-card {
-            background: rgba(255,255,255,0.03);
-            padding: 22px;
-            border-radius: 20px;
-            margin-bottom: 18px;
-            border-left: 5px solid var(--accent-blue);
-        }
-        .user-info { display: flex; align-items: center; margin-bottom: 12px; }
-        .user-img { width: 42px; height: 42px; border-radius: 50%; margin-right: 12px; border: 1px solid #444; }
-        .user-name { font-size: 0.95rem; font-weight: 600; }
-        .stars { color: #ffbc00; font-size: 0.75rem; }
-        .test-text { font-size: 0.85rem; color: #ccc; }
-
-        .footer { margin-top: 50px; font-size: 0.7rem; color: #444; letter-spacing: 1px; padding-bottom: 20px; }
-        h2 { font-size: 1.2rem; margin-bottom: 20px; }
+        .footer { margin-top: 50px; font-size: 0.7rem; color: #444; padding-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -211,14 +177,6 @@
     <div class="background-logos">
         <i class="fab fa-instagram insta-1"></i>
         <i class="fab fa-tiktok tiktok-1"></i>
-        <i class="fab fa-instagram insta-2"></i>
-        <i class="fab fa-tiktok tiktok-2"></i>
-        <i class="fab fa-instagram insta-3"></i>
-        <i class="fab fa-tiktok tiktok-3"></i>
-        <i class="fab fa-instagram insta-4"></i>
-        <i class="fab fa-tiktok tiktok-4"></i>
-        <i class="fab fa-instagram insta-5"></i>
-        <i class="fab fa-tiktok tiktok-5"></i>
     </div>
 
     <div class="container">
@@ -226,7 +184,7 @@
         <img src="logo-removebg-preview.png" alt="SharkSeguidores Logo" class="brand-logo">
 
         <div class="logo">SHARK<span>SEGUIDORES</span></div>
-        <p class="tagline">Impulsa tu presencia digital en México 🇲🇽</p>
+        <p class="tagline">Impulsa tu presencia digital 🇲🇽 🇦🇷</p>
 
         <div class="trust-badges">
             <div><i class="fas fa-shield-alt"></i>Seguro</div>
@@ -236,7 +194,7 @@
         </div>
 
         <div class="urgent-bar">
-            <i class="fas fa-clock"></i> PROMOCIONES VÁLIDAS POR: <span id="timer">02:59:59</span>
+            <i class="fas fa-clock"></i> OFERTA TERMINA EN: <span id="timer">02:59:59</span>
         </div>
 
         <div class="price-grid">
@@ -251,16 +209,16 @@
                 <span class="price">$315 MXN</span>
             </div>
             <div class="price-card featured">
-                <h3>🔥 Pack Viral: Maximo Crecimiento</h3>
+                <span style="font-size: 0.6rem; color: var(--primary-red); font-weight: 800;">🔥 LO MÁS VENDIDO</span>
                 <span class="amount">20k Segs + 10k Likes</span>
                 <span class="price">$500 MXN</span>
             </div>
         </div>
 
-       <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
             <div style="text-align: left;">
-                <span style="display:block; font-weight:800; font-size:1.1rem;">¡ORDENAR POR WHATSAPP!</span>
-                <span style="display:block; font-size:0.75rem; opacity:0.9;">Atención personalizada 24/7</span>
+                <span style="display:block; font-weight:800; font-size:1rem;">¡ORDENAR POR WHATSAPP!</span>
+                <span style="display:block; font-size:0.7rem; opacity:0.9;">Atención personalizada 24/7</span>
             </div>
             <div class="wa-icon-container">
                 <i class="fab fa-whatsapp"></i>
@@ -268,19 +226,10 @@
         </a>
 
         <h2>Preguntas Frecuentes</h2>
-
         <div class="faq-section">
             <div class="faq-item">
                 <h4>¿Es seguro para mi cuenta?</h4>
-                <p>100% seguro, el servicio es totalmente organico y no pedimos ningun dato de tu cuenta.</p>
-            </div>
-            <div class="faq-item">
-                <h4>¿Se puede tener la cuenta privada?</h4>
-                <p>Si, solo debe estar publica durante la carga y luego puede volver a privada.</p>
-            </div>
-            <div class="faq-item">
-                <h4>¿Cuales son los metodos de pago?</h4>
-                <p>Aceptamos transferencia de cualquier banco y deposito en Oxxo o 7Eleven.</p>
+                <p>100% seguro, el servicio es totalmente orgánico y no pedimos ningún dato de tu cuenta.</p>
             </div>
             <div class="faq-item">
                 <h4>¿Cuánto tarda la entrega?</h4>
@@ -288,34 +237,8 @@
             </div>
         </div>
 
-        <h2>Opiniones de Clientes</h2>
-
-        <div class="testimonials">
-            <div class="testimonial-card">
-                <div class="user-info">
-                    <img src="https://i.pravatar.cc/100?u=1" class="user-img">
-                    <div>
-                        <div class="user-name">@Magaanoya</div>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="test-text">"La neta me daba desconfianza pero llegaron súper rápido. Muy recomendados para darle un empujón al perfil."</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="user-info">
-                    <img src="https://i.pravatar.cc/100?u=2" class="user-img">
-                    <div>
-                        <div class="user-name">@Logambera</div>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="test-text">"Servicio de diez. Los seguidores no se bajan y la atención por WhatsApp fue muy amable."</p>
-            </div>
-        </div>
-
         <div class="footer">
-            CONEXIÓN CIFRADA by Lola • SHARKSEGUIDORES.MX 2020/2026
+            SHARKSEGUIDORES.MX 2026 • Argentina 🇦🇷
         </div>
     </div>
 
@@ -326,19 +249,13 @@
                 hours = parseInt(timer / 3600, 10);
                 minutes = parseInt((timer % 3600) / 60, 10);
                 seconds = parseInt(timer % 60, 10);
-
                 hours = hours < 10 ? "0" + hours : hours;
                 minutes = minutes < 10 ? "0" + minutes : minutes;
                 seconds = seconds < 10 ? "0" + seconds : seconds;
-
                 display.textContent = hours + ":" + minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = duration;
-                }
+                if (--timer < 0) timer = duration;
             }, 1000);
         }
-
         window.onload = function () {
             var threeHours = 60 * 60 * 3,
                 display = document.querySelector('#timer');
