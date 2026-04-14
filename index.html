@@ -23,7 +23,8 @@
             color: white;
             display: flex;
             justify-content: center;
-            padding: 40px 20px;
+            /* AJUSTE: Margen superior mínimo para pegar todo arriba */
+            padding: 10px 20px 40px 20px; 
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
@@ -63,10 +64,12 @@
             z-index: 1;
         }
 
-        /* LOGO ESTILO */
+        /* LOGO ESTILO - AJUSTE CRÍTICO DE MÁRGENES */
         .brand-logo {
-            width: 180px; /* Ajusta el tamaño según prefieras */
-            margin-bottom: 10px;
+            width: 180px;
+            /* AJUSTE: Eliminados márgenes superiores e inferiores para pegar todo */
+            margin: 0px auto; 
+            display: block;
             filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.3));
         }
 
@@ -92,7 +95,7 @@
         }
         .trust-badges div i { color: var(--accent-blue); display: block; margin-bottom: 5px; font-size: 1.2rem; }
 
-        /* BARRA DE URGENCIA (REUBICADA ABAJO DE TRUST BADGES) */
+        /* BARRA DE URGENCIA */
         .urgent-bar {
             background: #ffbc00;
             color: black;
@@ -164,7 +167,7 @@
             animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
+            @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4); }
             50% { transform: scale(1.02); box-shadow: 0 10px 40px rgba(158, 11, 15, 0.6); }
             100% { transform: scale(1); box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4); }
@@ -178,11 +181,13 @@
         }
         .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.8rem; }
 
+        /* Preguntas Frecuentes */
         .faq-section { text-align: left; margin-bottom: 40px; }
         .faq-item { background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #222; }
         .faq-item h4 { font-size: 0.85rem; margin-bottom: 5px; color: var(--accent-blue); }
         .faq-item p { font-size: 0.8rem; color: #aaa; }
 
+        /* Testimonios */
         .testimonials { text-align: left; }
         .testimonial-card {
             background: rgba(255,255,255,0.03);
@@ -210,6 +215,10 @@
         <i class="fab fa-tiktok tiktok-2"></i>
         <i class="fab fa-instagram insta-3"></i>
         <i class="fab fa-tiktok tiktok-3"></i>
+        <i class="fab fa-instagram insta-4"></i>
+        <i class="fab fa-tiktok tiktok-4"></i>
+        <i class="fab fa-instagram insta-5"></i>
+        <i class="fab fa-tiktok tiktok-5"></i>
     </div>
 
     <div class="container">
@@ -248,7 +257,7 @@
             </div>
         </div>
 
-        <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
+       <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
             <div style="text-align: left;">
                 <span style="display:block; font-weight:800; font-size:1.1rem;">¡ORDENAR POR WHATSAPP!</span>
                 <span style="display:block; font-size:0.75rem; opacity:0.9;">Atención personalizada 24/7</span>
