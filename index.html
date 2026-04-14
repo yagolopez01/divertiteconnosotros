@@ -23,23 +23,16 @@
             color: white;
             display: flex;
             justify-content: center;
-            /* Reducimos el padding superior al mínimo */
-            padding: 5px 20px 40px 20px; 
+            padding: 15px 20px 40px 20px; 
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* --- FONDOS DISPERSOS --- */
         .background-logos {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.15;
-            pointer-events: none;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; opacity: 0.15; pointer-events: none;
         }
 
         .background-logos i {
@@ -60,19 +53,18 @@
             z-index: 1;
         }
 
-        /* AJUSTE PARA COMPENSAR EL ESPACIO DEL ARCHIVO DE IMAGEN */
+        /* AJUSTE DE MÁRGENES: Suavizado para dar un poco más de aire */
         .brand-logo {
             width: 180px;
             display: block;
-            margin: -40px auto -35px auto; /* Márgenes negativos para absorber el aire negro de la imagen */
+            margin: -25px auto -20px auto; 
             filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.3));
         }
 
-        /* Header & Logo Texto */
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -80,7 +72,6 @@
         
         .tagline { font-size: 0.9rem; color: #888; margin-bottom: 20px; }
 
-        /* Iconos de Confianza */
         .trust-badges {
             display: flex;
             justify-content: space-around;
@@ -90,40 +81,35 @@
         }
         .trust-badges div i { color: var(--accent-blue); display: block; margin-bottom: 5px; font-size: 1.2rem; }
 
-        /* BARRA DE URGENCIA */
         .urgent-bar {
             background: #ffbc00;
             color: black;
             font-size: 0.8rem;
             font-weight: 800;
-            padding: 8px;
+            padding: 10px;
             border-radius: 10px;
             margin-bottom: 20px;
             text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
         }
 
-        /* Grilla de Precios */
         .price-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .price-card {
             background: var(--card-bg);
-            padding: 15px 10px;
+            padding: 20px 10px;
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
         }
 
-        .price-card h3 { font-size: 0.7rem; color: #aaa; text-transform: uppercase; }
-        .price-card .amount { font-size: 1.1rem; font-weight: 800; display: block; margin: 3px 0; }
+        .price-card h3 { font-size: 0.75rem; color: #aaa; text-transform: uppercase; }
+        .price-card .amount { font-size: 1.1rem; font-weight: 800; display: block; margin: 5px 0; }
         .price-card .price { font-size: 1.2rem; color: var(--accent-blue); font-weight: 600; }
         
         .featured { 
@@ -133,7 +119,6 @@
             position: relative;
         }
 
-        /* Botón de WhatsApp */
         .btn-whatsapp {
             display: flex;
             align-items: center;
@@ -141,7 +126,7 @@
             background-color: var(--primary-red);
             color: white;
             text-decoration: none;
-            padding: 15px 20px;
+            padding: 18px 25px;
             border-radius: 15px;
             margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(158, 11, 15, 0.4);
@@ -156,18 +141,32 @@
 
         .wa-icon-container {
             background: white;
-            width: 40px; height: 40px;
+            width: 45px; height: 45px;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
         }
-        .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.6rem; }
+        .wa-icon-container i { color: var(--whatsapp-green); font-size: 1.8rem; }
 
-        h2 { font-size: 1.2rem; margin-bottom: 20px; }
+        h2 { font-size: 1.2rem; margin-bottom: 20px; margin-top: 20px; }
 
         .faq-section { text-align: left; margin-bottom: 40px; }
         .faq-item { background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #222; }
         .faq-item h4 { font-size: 0.85rem; color: var(--accent-blue); }
         .faq-item p { font-size: 0.8rem; color: #aaa; }
+
+        .testimonials { text-align: left; margin-bottom: 40px; }
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            padding: 22px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            border-left: 5px solid var(--accent-blue);
+        }
+        .user-info { display: flex; align-items: center; margin-bottom: 12px; }
+        .user-img { width: 42px; height: 42px; border-radius: 50%; margin-right: 12px; border: 1px solid #444; }
+        .user-name { font-size: 0.95rem; font-weight: 600; }
+        .stars { color: #ffbc00; font-size: 0.75rem; }
+        .test-text { font-size: 0.85rem; color: #ccc; }
 
         .footer { margin-top: 50px; font-size: 0.7rem; color: #444; padding-bottom: 20px; }
     </style>
@@ -184,7 +183,7 @@
         <img src="logo-removebg-preview.png" alt="SharkSeguidores Logo" class="brand-logo">
 
         <div class="logo">SHARK<span>SEGUIDORES</span></div>
-        <p class="tagline">Impulsa tu presencia digital 🇲🇽 🇦🇷</p>
+        <p class="tagline">Impulsa tu presencia digital 🇲🇽</p>
 
         <div class="trust-badges">
             <div><i class="fas fa-shield-alt"></i>Seguro</div>
@@ -209,7 +208,7 @@
                 <span class="price">$315 MXN</span>
             </div>
             <div class="price-card featured">
-                <span style="font-size: 0.6rem; color: var(--primary-red); font-weight: 800;">🔥 LO MÁS VENDIDO</span>
+                <span style="font-size: 0.9rem; color: var(--primary-red); font-weight: 800;">🔥 LO MÁS VENDIDO : PACK INFLUENCER</span>
                 <span class="amount">20k Segs + 10k Likes</span>
                 <span class="price">$500 MXN</span>
             </div>
@@ -217,13 +216,38 @@
 
         <a href="https://api.whatsapp.com/send?phone=5491168923183&text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20impulsar%20mi%20perfil" class="btn-whatsapp">
             <div style="text-align: left;">
-                <span style="display:block; font-weight:800; font-size:1rem;">¡ORDENAR POR WHATSAPP!</span>
-                <span style="display:block; font-size:0.7rem; opacity:0.9;">Atención personalizada 24/7</span>
+                <span style="display:block; font-weight:800; font-size:1.1rem;">¡ORDENAR POR WHATSAPP!</span>
+                <span style="display:block; font-size:0.75rem; opacity:0.9;">Atención personalizada 24/7</span>
             </div>
             <div class="wa-icon-container">
                 <i class="fab fa-whatsapp"></i>
             </div>
         </a>
+
+        <h2>Opiniones de Clientes</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/100?u=1" class="user-img">
+                    <div>
+                        <div class="user-name">@Magaanoya</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="test-text">"La neta me daba desconfianza pero llegaron súper rápido. Muy recomendados para darle un empujón al perfil."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/100?u=2" class="user-img">
+                    <div>
+                        <div class="user-name">@Logambera</div>
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="test-text">"Servicio de diez. Los seguidores no se bajan y la atención por WhatsApp fue muy amable."</p>
+            </div>
+        </div>
 
         <h2>Preguntas Frecuentes</h2>
         <div class="faq-section">
@@ -232,13 +256,27 @@
                 <p>100% seguro, el servicio es totalmente orgánico y no pedimos ningún dato de tu cuenta.</p>
             </div>
             <div class="faq-item">
+
+                <h4>¿Se puede tener la cuenta privada?</h4>
+
+                <p>Si, solo debe estar publica durante la carga y luego puede volver a privada.</p>
+
+            </div>
+            <div class="faq-item">
+
+                <h4>¿Cuales son los metodos de pago?</h4>
+
+                <p>Aceptamos transferencia de cualquier banco y deposito en Oxxo o 7Eleven.</p>
+
+            </div>
+            <div class="faq-item">
                 <h4>¿Cuánto tarda la entrega?</h4>
                 <p>Iniciamos en menos de 15 minutos tras confirmar tu pedido por WhatsApp.</p>
             </div>
         </div>
 
         <div class="footer">
-            SHARKSEGUIDORES.MX 2026 • Argentina 🇦🇷
+          • CIFRADO by Lola - SHARKSEGUIDORES.MX 2020/2026 •
         </div>
     </div>
 
